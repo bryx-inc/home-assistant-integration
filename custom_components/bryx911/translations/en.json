@@ -1,0 +1,113 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Bryx 911",
+        "description": "Sign in with your Bryx 911 account. Home Assistant registers itself as a device on your account and stores the API key it receives. Your password is not saved.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        },
+        "sections": {
+          "advanced": {
+            "name": "Advanced",
+            "data": {
+              "url": "Server URL"
+            },
+            "data_description": {
+              "url": "Leave this unchanged unless you were told to use a different server. Enter the base URL, without /graphql."
+            }
+          }
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate Bryx 911",
+        "description": "The stored API key for {email} is no longer valid. Enter the password again to get a new one.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the Bryx 911 API.",
+      "invalid_auth": "That email and password were not accepted.",
+      "invalid_url": "The server URL must be an HTTPS URL, such as https://graph.bryx911.com.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This Bryx 911 account is already set up.",
+      "reauth_successful": "Bryx 911 was reauthenticated successfully.",
+      "wrong_account": "Those credentials are for a different Bryx 911 account."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Bryx 911 options",
+        "description": "Choose which agencies to track. Leave this empty to track every agency you belong to.",
+        "data": {
+          "agencies": "Agencies"
+        }
+      },
+      "units": {
+        "title": "Units",
+        "description": "Choose which of your units in those agencies get a device. Units you join later are included automatically.",
+        "data": {
+          "units": "Units"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the Bryx 911 API.",
+      "unknown": "An unexpected error occurred."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "active_job": {
+        "name": "Active job"
+      },
+      "connection": {
+        "name": "Connection"
+      }
+    },
+    "calendar": {
+      "jobs": {
+        "name": "Jobs"
+      }
+    },
+    "sensor": {
+      "latest_job": {
+        "name": "Latest job"
+      },
+      "latest_job_type": {
+        "name": "Latest job type"
+      },
+      "latest_job_location": {
+        "name": "Latest job location"
+      },
+      "latest_job_time": {
+        "name": "Latest job time"
+      },
+      "open_jobs": {
+        "name": "Open jobs"
+      },
+      "supplementals": {
+        "name": "Supplementals"
+      },
+      "responders": {
+        "name": "{response} responders"
+      }
+    },
+    "switch": {
+      "on_duty": {
+        "name": "On duty"
+      }
+    }
+  },
+  "exceptions": {
+    "duty_status_failed": {
+      "message": "Could not change your duty status: {error}"
+    }
+  }
+}

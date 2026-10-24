@@ -1,0 +1,13 @@
+{
+  "domain": "bryx911",
+  "name": "Bryx 911",
+  "categories": ["messaging_notifications"],
+  "codeowners": ["@JBassett"],
+  "config_flow": true,
+  "documentation": "https://github.com/bryx-inc/home-assistant-integration",
+  "integration_type": "service",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/bryx-inc/home-assistant-integration/issues",
+  "requirements": ["gql[aiohttp]==4.0.0"],
+  "version": "2.0.0"
+}
