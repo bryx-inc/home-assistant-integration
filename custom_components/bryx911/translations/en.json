@@ -31,7 +31,7 @@
     "error": {
       "cannot_connect": "Could not reach the Bryx 911 API.",
       "invalid_auth": "That email and password were not accepted.",
-      "invalid_url": "The server URL must be an HTTPS URL, such as https://graph.bryx911.com.",
+      "invalid_url": "The server URL must be an HTTPS URL, such as {default_url}.",
       "unknown": "An unexpected error occurred."
     },
     "abort": {

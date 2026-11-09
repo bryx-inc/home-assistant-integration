@@ -223,6 +223,7 @@ async def test_invalid_server_url_shows_error(
 
     assert result["type"] is FlowResultType.FORM
     assert result["errors"] == {"base": "invalid_url"}
+    assert result["description_placeholders"] == {"default_url": DEFAULT_URL}
     mock_client.assert_not_called()
     # The form comes back open, with what was entered apart from the password.
     advanced, url_key = _server_field(result)

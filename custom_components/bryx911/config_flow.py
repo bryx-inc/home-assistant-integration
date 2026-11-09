@@ -179,6 +179,8 @@ class BryxConfigFlow(ConfigFlow, domain=DOMAIN):
                 _user_schema(expanded=url != DEFAULT_URL), entered
             ),
             errors=errors,
+            # Hassfest rejects URLs written into translation strings.
+            description_placeholders={"default_url": DEFAULT_URL},
         )
 
     async def async_step_reauth(
